@@ -231,7 +231,7 @@ Pop up End ----------------------
 	align-self: center;	
 	color: white;
 	padding: 3%;
-	overflow:scroll;
+
 }
 .time-table tr{
 	background: var(--gracherry);
@@ -356,6 +356,11 @@ Pop up End ----------------------
 		scale:0.5;
 	}
 	
+
+.time-table {
+	overflow:scroll;
+}
+	
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -387,7 +392,6 @@ Pop up End ----------------------
 	.col-header {
 		width: 60%;
 	}
-
 	#hero {
 		background: linear-gradient(0deg, rgba(255, 175, 182, .60) 0%, rgba(255, 175, 182, 0.014425838694852922) 10%, rgba(0, 0, 0, 1) 100%), #02002A;
 
