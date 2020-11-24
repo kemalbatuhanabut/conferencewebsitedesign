@@ -23,8 +23,14 @@ cardlar one  row in mobile
 menu flickty tracker  
 
 popup yap 
+degraded olmasın
+
+input ları marginle
+buttonlar gradust 
+particles remove 
 
 menü yap
+
 
 -->
 
@@ -49,23 +55,26 @@ menü yap
 		<a class="menu-link" data-anchor="schedule">Schedule</a>		
 		<a class="menu-link" data-anchor="">Contact</a>		
 	</div>
-	<section id="hero" data-sectionName="register">		
-	<header class="vh-100" >
-		<div class="headerBgWrapper" id="particles-js">
+	<section id="hero" data-section-name="register">				
+	<header class="vh-100 " >		
+		  <div class="headerBgWrapper">
+			<video autoplay muted loop id="myVideo">
+				<source src="/bgvid.mp4" type="video/mp4">
+			  </video>
 			<div class="row z-index-50">
 				<div class="col-header z-index-50">
 					<h1>Code for Internet Conference</h1>
 					<h3>20.10.2020</h3>
 					<h3>Mercedes-Benz Stadium ATLANTA GA</h3>
 					<a class="headerCta" id="popregister">Register</a>
-				</div>
+				</div>		
 			</div>
 		</div>
 	</header>
 </section>
-	<section class="vhmin-100 d-flex" id="speakers" data-sectionName="speakers">		
-		<div class="row m-4">
-			<h2 class="inrowTitle textColorGCD">Speakers</h2>
+	<section class="vhmin-100 " id="speakers" data-section-name="speakers">		
+		<h2 class="inrowTitle textColorGCD">Speakers</h2>
+		<div class="row">	
 			<div class="card-wrapper">
 				<div class="card-header">
 					<img class="card-img"
@@ -91,7 +100,6 @@ menü yap
 					<a class="card-readMore">Read More >></a>
 				</div>
 			</div>
-
 			<div class="card-wrapper">
 				<div class="card-header">
 					<img class="card-img"
@@ -118,7 +126,6 @@ menü yap
 					<a class="card-readMore">Read More >></a>
 				</div>
 			</div>
-
 			<div class="card-wrapper">
 				<div class="card-header">
 					<img class="card-img"
@@ -149,7 +156,7 @@ menü yap
 
 	</section>
 
-	<section class="vh-100 " id="timetable" data-sectionName="schedule" > 
+	<section class="vh-100 " id="timetable" data-section-name="schedule" > 
 		<h2 class="inrowTitle">Schedule</h2>
 		<div class="row">
 <div class="time-table ">	
@@ -203,15 +210,6 @@ menü yap
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 		integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
 		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-		integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gpu.js/1.10.4/gpu.min.js"
-		integrity="sha512-XJulw66Z6SGlGBRUHNsWh4cSutICOXLZsUlmylbzV8MFrtrXQH2hQ3qbPFd8tJLXntvOO24yM7PDFIrlHfvsFg=="
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
-		integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
-		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js" integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ==" crossorigin="anonymous"></script>
@@ -234,13 +232,11 @@ menü yap
 			$('body').css('overflow','scroll');
 		});
 
-		particlesJS.load('particles-js', 'particlesjs-config.json', function () {
-			console.log('callback - particles.js config loaded');
-		});
-
 		$(function() {
           $.scrollify({
-            section : "section",			
+            section : "section",
+			sectionName  : "sectionName",
+			scrollSpeed: 1100,		
 			afterRender:function() {
 			$('.menu-link').removeClass('menu-active');			
 			$(this).addClass('menu-active');},
@@ -273,12 +269,13 @@ menü yap
 			scrollTrigger:{
 			trigger:'#speakers .inrowTitle',
 			toggleActions:'restart pause reverse pause',
-			start:'top center',
-			end:'400% center',			
+			start:'top 80%',
+			end:'top 35%',			
 			scrub:true,						
 			},		
 			duration: 2,	
-			opacity: 0,					
+			opacity: 0,	
+			display:"none",				
 			y:-500,
 			x:-500,
 		  	stagger:0.4,			
@@ -290,14 +287,14 @@ menü yap
 			scrollTrigger:{
 			trigger:'#timetable .inrowTitle',
 			toggleActions:'restart pause reverse pause',			
-			start:'400% center',
-			end:'600% center',			
+			start:'top 80%',
+			end:'top 35%',			
 			scrub:true,						
 			},		
 			duration: 2,	
-			opacity: 0,	
-			display:"none",				
-			y:-500,
+			opacity: 0,				
+			display:'none',
+			y:-200,
 			x: 500,
 		  	stagger:0.4,			
 		});
@@ -305,15 +302,14 @@ menü yap
 		ttble.from('tr:nth-child(even)',{
 			scrollTrigger:{
 			trigger:'.time-table',
-			toggleActions:'restart pause reverse pause',
-			start:'top 60%',			
-			end:'top 33%',
+			toggleActions:'restart pause reverse pause',						
+			start:'top 80%',			
+			end:'top 35%',
 			scrub:true,			
 				},
 			duration:1.5,
-			opacity: 0,	
-			display:"none",	
-			x: -1500,
+			opacity: 0,				
+			x: -500,
 			scaleX: 0,
 			scaleY: 0,
 		  	stagger:0.4,			
@@ -321,15 +317,14 @@ menü yap
 		ttble.from('tr:nth-child(odd)',{
 			scrollTrigger:{
 			trigger:'.time-table',
-			toggleActions:'restart pause reverse pause',
-			start:'top 60%',			
-			end:'top 33%',
+			toggleActions:'restart pause reverse pause',			
+			start:'top 80%',			
+			end:'top 35%',
 			scrub:true,			
 				},
 			duration:1.5,
-			opacity: 0,
-			display:"none",
-			x: 1500,
+			opacity: 0,		
+			x: 500,
 			scaleX: 0,
 			scaleY: 0,
 		  	stagger:0.4,			

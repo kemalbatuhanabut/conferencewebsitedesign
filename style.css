@@ -94,18 +94,15 @@ input:active{
 	margin: 60px;
 }
 .inrowTitle{	
-	font-size: 6vmin;
-	flex:100%;
-	text-align: center;
+	font-size: 6vmin;		
 	padding:0;
-	margin:0;
-	align-self: end;	
+	margin:0;		
+	align-self: center;
+	margin-top: auto;
 }
 .textColorGCD{
 	color:var(--gracherrydark)
 }
-
-
 .m-auto{
 	margin-left:auto;
 	margin-right: auto;
@@ -177,6 +174,10 @@ Pop Up ----------------------
 	justify-content: center;
 	align-items: center;
 }
+.formwrapper-register-popup input{
+margin-right:15px;
+margin-left:15px;
+}
 .formwrapper-register-popup p{
 	font-size: 20px;
 }
@@ -197,9 +198,10 @@ Pop up End ----------------------
 	display: flex;		
 	justify-content: space-around;
 	-webkit-justify-content: space-around;
-	flex-wrap:wrap;
-	flex-direction: row;	
+	flex-wrap:wrap;	
 	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 
@@ -226,7 +228,7 @@ Pop up End ----------------------
 
 .headerCta {
 	display: inline-block;
-	background: #692436;
+	background: var(--gracherry);
 	padding: 10px 20px 10px 20px;
 	margin-right: auto;
 	margin-left: auto;
@@ -252,19 +254,34 @@ Pop up End ----------------------
 	line-height: 1.5em;
 	
 }
-
-
-
-#hero {
-
-	background: linear-gradient(0deg, rgba(255, 175, 182, .25) 0%, rgba(255, 175, 182, 0.014425838694852922) 15%, rgba(0, 0, 0, 1) 100%), #02002A;
+#myVideo{
+	position: absolute;			
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	
+}
+#hero {	
+	/*background: linear-gradient(0deg, rgba(255, 175, 182, .25) 0%, rgba(255, 175, 182, 0.014425838694852922) 15%, rgba(0, 0, 0, 1) 100%), #02002A;*/
 }
 
 #speakers {
+	display: flex;
+	flex-direction: column;		
 	background: linear-gradient(0deg, rgba(255, 175, 182, 1) 0%, rgba(255, 175, 182, 0.014425838694852922) 100%);
 }
 
+#speakers .row{
+	
+}
+
 #timetable{	
+	display: flex;
+	flex-direction: column;	
 	background: linear-gradient(0deg, rgba(255, 175, 182, 1) 100%, rgba(255, 175, 182, 0.014425838694852922) 0%);
 }
 
@@ -309,6 +326,7 @@ Pop up End ----------------------
 	color: white;
 	font-family: var(--sub-heading-font-family);
 	padding-bottom: 0px;
+	
 }
 
 .card-titleLink {
