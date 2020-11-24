@@ -25,8 +25,13 @@ cardlar one  row in mobile
 menu flickty tracker  
 
 popup yap 
-degraded olmasın
+
 menü yap
+
+
+mobilde cardlar çok yakın 
+section title contet cok ykaın 
+
 
 -->
 
@@ -239,7 +244,6 @@ menü yap
 		  });
         });
 		
-
 		var scroll = new SmoothScroll('a[href*="#"]');
 		gsap.registerPlugin(ScrollTrigger);
 		
@@ -277,13 +281,11 @@ menü yap
 			scaleY: 0,
 		  	stagger:0.4,			
 		});
-
-
 		var ttble = new gsap.timeline({yoyo:true});
 		ttble.from('#timetable .inrowTitle',
 		{
 			scrollTrigger:{
-			trigger:'#timetable ',
+			trigger:'#timetable',
 			toggleActions:'restart pause reverse pause',									
 			start:'top 80%',
 			end:'top 35%',			
@@ -296,7 +298,6 @@ menü yap
 			x: 500,
 		  	stagger:0.4,			
 		});
-
 		ttble.from('tr:nth-child(even)',{
 			scrollTrigger:{
 			trigger:'#timetable',
