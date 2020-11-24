@@ -20,6 +20,7 @@ cardlar one  row in mobile
 	timoty might be firs ordered
 --
 
+menu flickty tracker  
 
 popup yap 
 
@@ -43,13 +44,13 @@ menü yap
 		</div>
 		 </div>
 	<div class="menu">		
-		<a class="menu-link" href="#hero">Register</a>		
-		<a class="menu-link" href="#speakers">Speakers</a>		
-		<a class="menu-link" href="#timetable">Schedule</a>		
+		<a class="menu-link" onclick="$.scrollify.move('#Register');">Register</a>		
+		<a class="menu-link" onclick="$.scrollify.move('#Speakers');">Speakers</a>		
+		<a class="menu-link" onclick="$.scrollify.move('#Schedule');">Schedule</a>		
 		<a class="menu-link" >Contact</a>		
 	</div>
-	<section>		
-	<header class="vh-100" id="hero">
+	<section id="hero" data-sectionName="Register">		
+	<header class="vh-100" >
 		<div class="headerBgWrapper" id="particles-js">
 			<div class="row z-index-50">
 				<div class="col-header z-index-50">
@@ -62,7 +63,7 @@ menü yap
 		</div>
 	</header>
 </section>
-	<section class="vhmin-100 d-flex" id="speakers">		
+	<section class="vhmin-100 d-flex" id="speakers" data-sectionName="Speakers">		
 		<div class="row m-4">
 			<h2 class="inrowTitle textColorGCD">Speakers</h2>
 			<div class="card-wrapper">
@@ -148,7 +149,7 @@ menü yap
 
 	</section>
 
-	<section class="vh-100 " id="timetable">
+	<section class="vh-100 " id="timetable" data-sectionName="Schedule" > 
 		<h2 class="inrowTitle">Schedule</h2>
 		<div class="row">
 <div class="time-table ">	
