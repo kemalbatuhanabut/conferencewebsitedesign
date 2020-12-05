@@ -16,9 +16,14 @@
 	padding: 0px;
 }
 
+html{
+	-ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
+}
+
 body {
 	margin: 0px;
-	font-size:16px;
+	font-size:16px;	
 }
 
 h1,
@@ -116,35 +121,37 @@ Menu ----------------------
 ----------------------*/
 .menu{
 position: fixed;
-height:100%;
-right:15px;
+height:100vh;
+height:  -webkit-fill-available;
+right:0px;
 display: flex;
 flex-direction: column;
 justify-content: center;
 z-index:290000;
-margin-top:10px;
+margin-top:0px;
 overflow: hidden;
+width: 25px;
+cursor: pointer;
 }
 
 .menu-link{
-	margin-top: 15px;
-	margin-bottom:15px;
-	padding:5px;
-	font-size:19px;
+	margin-top: 0px;
+	margin-bottom:0px;
+	writing-mode: vertical-rl;
+	text-orientation: upright;	
+	flex:25%;		
 	color:white;
 	text-align:center;
 	text-decoration: none;
+	text-transform: uppercase;
 	background: var(--gracherry); 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.menu-active{
-	text-decoration: underline;
-	font-size: 22px;
-	margin-top: 10px;
-	margin-bottom:10px;
-	padding:10px;
+.menu-active{			
 	background: var(--gracherrybrown); 
-
 }
 
 /*----------------------
@@ -391,9 +398,7 @@ Pop up End ----------------------
 	.col-header {
 		width: 80%;
 	}
-	.menu{
-		scale:0.7;
-	}
+	
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
