@@ -298,7 +298,8 @@ Pop up End ----------------------
 	width: 250px;
 	margin: 32px 5px 5px 5px;
 	background: linear-gradient(var(--gracherry) 0%, #000000 60%);
-	padding: 20px;		
+	padding: 20px;	
+	margin-top: 90px ;	
 }
 
 .card-header {
@@ -365,6 +366,26 @@ Pop up End ----------------------
 	font-family: var(--sub-heading-font-family);
 	margin-left: auto;
 }
+.timetablebox{
+	width: 15%;		
+	padding:25px;
+	background: linear-gradient(var(--gracherry) 0%, #000000 60%);
+	color:white;
+	margin:15px;
+	text-align: center;
+}
+.timetablebox ul {
+	list-style-type: none;
+	padding: 0px 0px 0px 0px ;
+}
+.timetablebox li {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	line-height: 1.4rem;	
+	border-bottom: solid 1px;	
+	/* padding-bottom: 5px ; */
+
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -382,9 +403,14 @@ Pop up End ----------------------
 		scale:0.5;
 	}
 	
-	#timetable .row{	
-		overflow: hidden;
+	#timetable, #speakers {
+		padding-top:10%;
+		padding-bottom:10%; 
 	}
+
+	#timetable .row{	
+	}
+	
 	.time-table td{
 		background: #000000;
 		padding: 5px;
@@ -398,6 +424,7 @@ Pop up End ----------------------
 	.col-header {
 		width: 80%;
 	}
+
 	
 }
 
