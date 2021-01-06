@@ -10,6 +10,32 @@
 
 </head>
 <!--   browser-sync start --server  --files "./" -->
+
+<!-- 
+	
+--
+mercedens arena date yaklaşsın
+--
+title card margin duzgun olsun (30px)
+--
+cardlar one  row in mobile
+	timoty might be firs ordered
+--
+
+menu flickty tracker  
+
+popup yap 
+
+menü yap
+
+
+mobilde cardlar çok yakın 
+section title contet cok ykaın 
+
+
+-->
+
+
 <body>
 	<div class="popup popupregister">
 		<img class="exitfrompopup" id="takemeout" src="https://img.icons8.com/windows/64/ffffff/macos-close.png" />
@@ -26,7 +52,7 @@
 		</div>
 	</div>
 	<div class="menu">
-		<div class="menu-link menu-active" data-anchor="register">Register</div>
+		<div class="menu-link" data-anchor="register">Register</div>
 		<div class="menu-link" data-anchor="speakers">Speakers</div>
 		<div class="menu-link" data-anchor="schedule">Schedule</div>
 		<div class="menu-link" data-anchor="map">Where</div>
@@ -40,7 +66,7 @@
 				<div class="row z-index-50">
 					<div class="col-header z-index-50">
 						<h1>Code for Internet Conference</h1>
-						<h3 style="margin-bottom:-15px;">20.10.2020</h3>
+						<h3>20.10.2020</h3>
 						<h3>Mercedes-Benz Stadium ATLANTA GA</h3>
 						<a class="headerCta" id="popregister">Register</a>
 					</div>
@@ -144,7 +170,7 @@
 		<h2 class="inrowTitle">Schedule</h2>
 		<div class="row">
 			<div class="sunday timetablebox" >
-				<h2 >Sunday, Oct 20</h2>
+				<h4 >Sunday, Oct 20</h4>
 				<ul>
 					<li>Meet and Greet<br>
 						<small>10:00-12:00</small>
@@ -171,7 +197,7 @@
 				</ul>
 			</div>
 			<div class="wednesday timetablebox">
-				<h2>Wednesday, Oct 21</h2>
+				<h4>Wednesday, Oct 21</h4>
 				<ul>
 					<li>Keramidas Lecture<br>
 						The Interface Experience<br>
@@ -199,7 +225,7 @@
 				</ul>
 			</div>
 			<div class="thursday timetablebox">
-				<h2>Thursday, Oct 22</h2>
+				<h4>Thursday, Oct 22</h4>
 				<ul>
 					<li>Giampietro Lecture<br>
 						I am a Handle<br>
@@ -280,10 +306,8 @@
 				section: "section",
 				sectionName: "sectionName",
 				scrollSpeed: 1100,
-				offset : 1,
-				setHeights: false,
 				overflowScroll: true,
-				touchScroll: true,
+				touchScroll:true,
 				before: function (a,b) {										
 					$('.menu-link').removeClass('menu-active');
 					$('.menu-link:nth-child('+(a+1)+')').addClass('menu-active');
